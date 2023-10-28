@@ -8,6 +8,8 @@ The main essence of the script is to determine how much the community in the soc
 * ER is an indicator of audience engagement, which is calculated using the formula: ${reactions/posts\over subscribers}$
 * ERR (ER views) is an indicator of audience engagement by the number of users covered, which is calculated using the formula: ${reactions/posts\over averagepostcoverage}$
 * Antidogs are users who are bots or zero accounts created to cheat various indicators.
+* Rtest is purely my test for the number of reactions.
+Thus, the more ER, ERR, Test and average reactions, the better the community (more active, not more twisted).
 ## How to use
 1. Clone this repo:
    ```
@@ -39,9 +41,11 @@ This script is not an ideal and a benchmark, but it is a good base for developme
 Скрипт был создан для рекламодателей и других людей, которым необходимо быть уверенными в том, что сообщество активно с минимальной накруткой при покупке рекламы в сообществе или для других целей.
 Это скрипт на Python, написанный еночьими пальчиками на [vk_api](https://github.com/python273/vk_api) и [tqdm](https://github.com/tqdm/tqdm) библиотеках. 
 Основная суть скрипта заключается в том, чтобы определить, насколько сообщество в социальной сети "Вконтакте" активно, накручено. Для этого используются понятия ER, ERR (ER views) и собачки:
-* ER - это показатель вовлеченности аудитории, который рассчитывается по формуле: ${реакции/посты\over подписчиков}$
+* ER - это показатель вовлеченности аудитории, который рассчитывается по формуле: ${реакции/посты\over подписчиков}$.
 * ERR (количество просмотров ER) - показатель вовлеченности аудитории по количеству охваченных пользователей, который рассчитывается по формуле: ${реакции/публикации\over средний показатель охвата}$
 * Собачки - это пользователи, которые являются ботами или нулевыми аккаунтами, созданными для накрутки различных показателей.
+* Rtest - чисто мой тест на количество реакций.
+Таким образом, чем больше ER, ERR, Rtest и среднее реакций, тем лучше сообщество (более активней, не накрученней).
 ## Как использовать
 1. Клонируйте это репозиторий:
    ```
