@@ -43,7 +43,7 @@ def walls_cheat(group_id, count_followers, pr_antidogs):
         comments += post["comments"]["count"]
         reposts += post["reposts"]["count"]
         if "views" in post:
-            if "count" in post:
+            if "count" in post["views"]:
                 views += post["views"]["count"]
         count += 1
 
@@ -169,5 +169,5 @@ def main(group_id: Union[str, int]):
 
 
 while True:
-    group = input("Введите ID/короткое имя/ссылку сообщества:")
+    group = input("Введите ID/короткое имя/ссылку сообщества: ")
     print(main(group))
