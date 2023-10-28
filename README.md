@@ -1,6 +1,7 @@
 # Rocket Raccoon project: cheat_radar_vk
 # EN
 Deceptive VK radar determines the honesty of communities in a social network: cheating, really active users.
+![image](https://github.com/rocket-ru/cheat_radar_vk/assets/148836731/035b8ebe-e23a-497d-adb2-e40ba5bfa786)
 ## What is this?
 The script was created for advertisers and other people who need to be sure that the community is active with minimal cheating when buying ads in the community or for other purposes.
 This is a Python script written by raccoon paws on the [vk_api](https://github.com/python273/vk_api) and [tqdm](https://github.com/tqdm/tqdm) libraries. 
@@ -9,6 +10,7 @@ The main essence of the script is to determine how much the community in the soc
 * ERR (ER views) is an indicator of audience engagement by the number of users covered, which is calculated using the formula: ${reactions/posts\over averagepostcoverage}$
 * Antidogs are users who are bots or zero accounts created to cheat various indicators.
 * Rtest is purely my test for the number of reactions.
+
 Thus, the more ER, ERR, Test and average reactions, the better the community (more active, not more twisted).
 ## How to use
 1. Clone this repo:
@@ -37,6 +39,7 @@ Thus, the more ER, ERR, Test and average reactions, the better the community (mo
 This script is not an ideal and a benchmark, but it is a good base for development in the field of community activity research. From this script, you can make a full-fledged VK bot, which only needs to throw a post from the group and he will say what kind of community it is. Don't throw stones at the raccoon - the raccoon shared a freebie.
 # RU
 Радар-накрутка вконтакте определяет накрученность сообществ в социальной сети: накрутку, действительно активных пользователей.
+![image](https://github.com/rocket-ru/cheat_radar_vk/assets/148836731/45072bc1-3b79-42e7-97e8-aa25c29f9830)
 ## Что это?
 Скрипт был создан для рекламодателей и других людей, которым необходимо быть уверенными в том, что сообщество активно с минимальной накруткой при покупке рекламы в сообществе или для других целей.
 Это скрипт на Python, написанный еночьими пальчиками на [vk_api](https://github.com/python273/vk_api) и [tqdm](https://github.com/tqdm/tqdm) библиотеках. 
@@ -45,6 +48,7 @@ This script is not an ideal and a benchmark, but it is a good base for developme
 * ERR (количество просмотров ER) - показатель вовлеченности аудитории по количеству охваченных пользователей, который рассчитывается по формуле: ${реакции/публикации\over средний показатель охвата}$
 * Собачки - это пользователи, которые являются ботами или нулевыми аккаунтами, созданными для накрутки различных показателей.
 * Rtest - чисто мой тест на количество реакций.
+
 Таким образом, чем больше ER, ERR, Rtest и среднее реакций, тем лучше сообщество (более активней, не накрученней).
 ## Как использовать
 1. Клонируйте это репозиторий:
