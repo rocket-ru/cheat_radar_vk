@@ -3,7 +3,7 @@
 Project by Rocket Raccoon in 2023
 Level: base (free)
 Type: VK script
-Version: 1.0
+Version: 1.1
 Contacts: t.me/single_rocket, vk.com/raccoon_rocket
 Comment: This script works on vk api and to use it you need to get a vk token.
         I am not responsible for the performance of the script.
@@ -146,7 +146,7 @@ def reactions_cheat(group_id):
     return count, 100 / all_count * count, all_count
 
 
-def main(group_id: Union[str, int]):
+def main(group_id: Union[str, int], language):
     if not group_id.isdigit():
         if 'vk.com' in group_id:
             group_id = group_id.split('vk.com/')[-1]
@@ -161,13 +161,27 @@ def main(group_id: Union[str, int]):
     # Запускаем проверку на накрутку лайков/комментариев
     left_wing, pc_variety, all_people_likes = reactions_cheat(group_id)
 
-    total = f"""Результаты:
+    if language == 'ru':
+        total = f"""Результаты:
     Подписчики: {count_followers} подписчиков из них {len(antidogs)} собачек | {pr_antidogs}%
     Показатели: ER {ER}% | ERViews {ERViews}% | Rtest {sum(Rtest) * 5}% - {Rtest} | Среднее {average_data}
     По накрутке на стене: {left_wing} из {all_people_likes} | {pc_variety}%"""
+    else:
+        total = f"""Results:
+    Subscribers: {count_followers} subscribers from them {len(antidogs)} antidogs | {pr_antidogs}%
+    Indicators: ER {ER}% | ERViews {ERViews}% | Rtest {sum(Rtest) * 5}% - {Rtest} | Average {average_data}
+    By cheating on the wall: {left_wing} from {all_people_likes} | {pc_variety}%"""
     return total
 
 
 while True:
-    group = input("Введите ID/короткое имя/ссылку сообщества: ")
-    print(main(group))
+    language = input("Введите ваш язык/Enter your language (ru/en): ")
+    if language not in ['ru', 'en']:
+        print('Не верный язык/Wrong language')
+    else:
+        print({'ru': 'Был выбран русский язык', 'en': 'English was chosen'}[language])
+        break
+while True:
+    group = input({'ru': 'Введите ID/короткое имя/ссылку сообщества: ',
+                   'en': 'Enter the community ID/short name/link: '}[language])
+    print(main(group, language))
