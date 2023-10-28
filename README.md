@@ -13,7 +13,12 @@ The main essence of the script is to determine how much the community in the soc
    ```
    git clone https://github.com/rocket-ru/cheat_radar_vk.git
    ```
-4. Install the required libraries
+2. Insert the token into the code:
+   - Follow the link [*click* ](https://oauth.vk.com/authorize?client_id=6121396&scope=1385558&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1 )
+   - Allow access
+   - Copy the link where you were thrown, and then copy the access_token variable
+   - Paste this token into the file `main.py` to the `token` variable
+3. Install the required libraries
 * using conda:
   ```
   conda env create -f requirements/environment.yml
@@ -22,7 +27,7 @@ The main essence of the script is to determine how much the community in the soc
   ```
   pip install -r requirements.txt
   ```
-3. Run the script and use:
+4. Run the script and use:
    ```
    python main.py
    ```
@@ -40,20 +45,25 @@ This script is not an ideal and a benchmark, but it is a good base for developme
 ## Как использовать
 1. Клонируйте это репозиторий:
    ```
-   git-клон https://github.com/rocket-ru/cheat_radar_vk.git
+   git clone https://github.com/rocket-ru/cheat_radar_vk.git
    ```
-4. Установите необходимые библиотеки
-* использование conda:
+2. Вставьте токен в код:
+   - Перейдите по ссылке [*тык* ](https://oauth.vk.com/authorize?client_id=6121396&scope=1385558&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1)
+   - Разрешите доступ
+   - Скопируйте ссылку, куда вас перекинуло, а затем скопируйте переменную access_token
+   - Вставьте данный токен в файл `main.py` в переменную `token`
+3. Установите необходимые библиотеки
+* через conda:
   ```
-  conda env create -f требования/environment.yml
+  conda env create -f requirements/environment.yml
   ```
-* использование pip:
+* через pip:
   ```
-  установка pip -r requirements.txt
+  pip install -r requirements.txt
   ```
-3. Запустите скрипт и используйте:
+4. Запустите скрипт и используйте:
    ```
-   питон main.py
+   python main.py
    ```
 ## Несколько последних слов
 Этот скрипт не является идеалом и эталоном, но он является хорошей базой для разработок в области исследования активности сообщества. Из этого скрипта можно сделать полноценного бота вконтакте, которому нужно только скинуть пост из группы и он скажет, что это за сообщество. Не бросайте камни в енота - енот поделился халявой.
